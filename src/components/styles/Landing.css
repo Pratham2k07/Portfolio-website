@@ -3,7 +3,10 @@
   max-width: var(--cMaxWidth);
   margin: auto;
   position: relative;
-  height: var(--vh);
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
 }
 .landing-container {
   width: var(--cWidth);
@@ -76,12 +79,13 @@
   height: 95%;
   left: 50%;
   transform: translateX(-50%);
-}
-.landing-image img {
-  height: 100%;
-  z-index: 2;
-  position: relative;
-}
+  .landing-intro {
+    top: 50%;
+    left: 55%;
+    right: auto;
+    transform: translate(-40%, -50%);
+    text-align: left;
+  }
 .character-rim {
   position: absolute;
   width: 400px;
@@ -98,7 +102,6 @@
   opacity: 0;
 }
 .character-model {
-  height: 80%;
   height: 80vh;
   position: absolute;
   max-width: 1920px;
@@ -106,9 +109,12 @@
   transform: translateX(-50%);
   width: 100%;
   left: 50%;
-  z-index: 0;
+  z-index: 2;
   bottom: 50px;
   pointer-events: inherit;
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
 .character-model::after {
   content: "";
@@ -156,11 +162,18 @@
   transform: translate(-50%, -50%);
   border-radius: 50%;
 }
-.landing-intro {
-  position: absolute;
-  z-index: 9;
-  top: 12%;
-  left: 0;
+.landing-intro h1 {
+  font-size: clamp(32px, 7vw, 80px);
+  line-height: 1.1;
+  font-weight: 700;
+  margin: 0;
+  margin-bottom: 10px;
+  font-family: "Geist", sans-serif;
+  letter-spacing: 2px;
+  text-transform: uppercase;
+  width: 100%;
+  word-break: break-word;
+}
 }
 .landing-intro h2 {
   margin: 0;
@@ -171,46 +184,61 @@
 }
 
 .landing-intro h1 {
-  margin: 0;
+  margin: 0 0 10px 0;
   letter-spacing: 2px;
-  font-size: 28px;
-  line-height: 28px;
-  font-weight: 500;
+  font-size: clamp(3rem, 8vw, 8rem);
+  line-height: 1.1;
+  font-weight: 700;
   font-family: "Geist", sans-serif;
+  word-break: break-word;
+  text-align: center;
+  width: 100%;
+  overflow-wrap: anywhere;
+  text-shadow: 0 2px 16px #000, 0 1px 0 #fff;
+}
+
+.landing-intro h1 span {
+  display: block;
+  font-weight: 300;
+  letter-spacing: 4px;
+  margin-top: 0.2em;
+  font-size: 0.9em;
 }
 
 /* .landing-intro h1 span {
    font-weight: 200; 
 } */
 
-.landing-info {
+.landing-intro {
   position: absolute;
-  right: 50%;
-  transform: translateX(50%);
-  bottom: 40px;
-  top: inherit;
-  z-index: 9;
+  z-index: 100;
+  top: 12%;
+  left: 5%;
+  width: auto;
+  pointer-events: none;
 }
-.landing-info h3 {
-  font-size: 22px;
+.landing-intro h1 {
+  font-size: clamp(48px, 10vw, 120px);
+  line-height: 1.1;
+  font-weight: 700;
+  margin: 0;
+  margin-bottom: 10px;
+  font-family: "Geist", sans-serif;
+  letter-spacing: 2px;
+  text-transform: uppercase;
+  width: 100%;
+  word-break: break-word;
+}
+.landing-intro h2 {
+  font-size: clamp(18px, 4vw, 40px);
   letter-spacing: 2px;
   font-weight: 300;
   color: var(--accentColor);
   margin: 0;
-}
-.landing-info h2 {
-  margin: 0;
-  margin-top: -20px;
-  margin-left: 20px;
-  font-family: "Geist", sans-serif;
-  font-weight: 600;
-  font-size: 32px;
-  line-height: 40px;
-  position: relative;
-  display: flex;
-  flex-wrap: nowrap;
-  text-transform: uppercase;
-  letter-spacing: 2px;
+  width: 100%;
+  display: block;
+  text-transform: none;
+  letter-spacing: 1px;
 }
 .landing-h2-info-1 {
   position: absolute;
@@ -218,21 +246,20 @@
 }
 h2.landing-info-h2 {
   color: #c481ff;
-  font-size: 42px;
-  width: 120%;
-  margin: 0;
+  font-size: clamp(1.5rem, 3vw, 2.5rem);
+  width: 100%;
+  margin: 0 0 8px 0;
   font-family: "Geist", sans-serif;
   font-weight: 600;
   position: relative;
-  margin-left: -5px;
-}
-.landing-h2-2 {
-  position: absolute;
-  top: 0;
-}
-.landing-info-h2::after {
-  content: "";
-  position: absolute;
+  .landing-intro h2 {
+    font-size: clamp(32px, 6vw, 60px);
+    letter-spacing: 2px;
+    font-weight: 300;
+    color: var(--accentColor);
+    margin: 0 0 20px 0;
+    width: 100%;
+  }
   width: 100%;
   height: 120%;
   z-index: 3;
@@ -304,8 +331,8 @@ h2.landing-info-h2 {
   }
   .landing-intro {
     top: 50%;
-    left: auto;
-    right: 66%;
+    left: 10%;
+    right: auto;
     transform: translate(0%, -50%);
   }
 
@@ -322,8 +349,8 @@ h2.landing-info-h2 {
 @media screen and (min-width: 1200px) {
   .landing-intro {
     top: 50%;
-    left: auto;
-    right: 70%;
+    left: 15%;
+    right: auto;
     transform: translate(0%, -50%);
   }
 

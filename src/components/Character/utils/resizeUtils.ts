@@ -13,6 +13,7 @@ export default function handleResize(
   const width = canvas3d.width;
   const height = canvas3d.height;
   renderer.setSize(width, height);
+  renderer.setPixelRatio(window.devicePixelRatio);
   camera.aspect = width / height;
   camera.updateProjectionMatrix();
   const workTrigger = ScrollTrigger.getById("work");

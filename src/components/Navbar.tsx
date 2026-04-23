@@ -42,15 +42,15 @@ const Navbar = () => {
   return (
     <>
       <div className="header">
-        <a href="/#" className="navbar-title" data-cursor="disable">
-          Logo
-        </a>
+
         <a
-          href="mailto:example@mail.com"
+          href="https://mail.google.com/mail/?view=cm&fs=1&to=pratham2k07@gmail.com&su=Collaboration%20Inquiry&body=Hi%20Pratham,%0D%0A%0D%0AI%20saw%20your%20portfolio%20and%20was%20impressed%20by%20your%20work.%20I%27d%20like%20to%20discuss..."
           className="navbar-connect"
+          target="_blank"
+          rel="noreferrer"
           data-cursor="disable"
         >
-          example@mail.com
+          pratham2k07@gmail.com
         </a>
         <ul>
           <li>

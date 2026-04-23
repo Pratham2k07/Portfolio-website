@@ -7,20 +7,17 @@ import {
   BallCollider,
   Physics,
   RigidBody,
-  CylinderCollider,
-  RapierRigidBody,
+  CylinderCollider
 } from "@react-three/rapier";
 
 const textureLoader = new THREE.TextureLoader();
 const imageUrls = [
-  "/images/react2.webp",
-  "/images/next2.webp",
-  "/images/node2.webp",
-  "/images/express.webp",
-  "/images/mongo.webp",
-  "/images/mysql.webp",
-  "/images/typescript.webp",
+  "/images/c.png",
+  "/images/python.png",
   "/images/javascript.webp",
+  "/images/mysql.webp",
+  "/images/cpp.png",
+  "/images/openai.png",
 ];
 const textures = imageUrls.map((url) => textureLoader.load(url));
 
@@ -45,7 +42,7 @@ function SphereGeo({
   material,
   isActive,
 }: SphereProps) {
-  const api = useRef<RapierRigidBody | null>(null);
+  const api = useRef<any>(null);
 
   useFrame((_state, delta) => {
     if (!isActive) return;
@@ -97,7 +94,7 @@ type PointerProps = {
 };
 
 function Pointer({ vec = new THREE.Vector3(), isActive }: PointerProps) {
-  const ref = useRef<RapierRigidBody>(null);
+  const ref = useRef<any>(null);
 
   useFrame(({ pointer, viewport }) => {
     if (!isActive) return;
@@ -168,12 +165,11 @@ const TechStack = () => {
 
   return (
     <div className="techstack">
-      <h2> My Techstack</h2>
-
       <Canvas
         shadows
         gl={{ alpha: true, stencil: false, depth: false, antialias: false }}
-        camera={{ position: [0, 0, 20], fov: 32.5, near: 1, far: 100 }}
+        camera={{ position: [0, 12, 20], fov: 35, near: 1, far: 100 }}
+        style={{ position: 'absolute', top: 0, left: 0, width: '100%', height: '100%' }}
         onCreated={(state) => (state.gl.toneMappingExposure = 1.5)}
         className="tech-canvas"
       >
