@@ -10,13 +10,13 @@ const Contact = () => {
           <div className="contact-box">
             <h4>Email</h4>
             <p>
-              <a href="https://mail.google.com/mail/?view=cm&fs=1&to=pratham2k07@gmail.com&su=Collaboration%20Inquiry&body=Hi%20Pratham,%0D%0A%0D%0AI%20saw%20your%20portfolio%20and%20was%20impressed%20by%20your%20work.%20I%27d%20like%20to%20discuss..." target="_blank" rel="noreferrer" data-cursor="disable">
+              <a href="https://mail.google.com/mail/?view=cm&fs=1&to=pratham2k07@gmail.com&su=Collaboration%20Inquiry&body=" target="_blank" rel="noreferrer" data-cursor="disable">
                 pratham2k07@gmail.com
               </a>
             </p>
             <h4>LinkedIn</h4>
             <p>
-              <a href="https://linkedin.com" target="_blank" data-cursor="disable">
+              <a href="https://www.linkedin.com/in/pratham-lalwani-40a221246/" target="_blank" data-cursor="disable">
                 Connect on LinkedIn
               </a>
             </p>
