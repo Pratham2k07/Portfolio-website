@@ -44,7 +44,7 @@ const Navbar = () => {
       <div className="header">
 
         <a
-          href="https://mail.google.com/mail/?view=cm&fs=1&to=pratham2k07@gmail.com&su=Collaboration%20Inquiry&body="
+          href="mailto:pratham2k07@gmail.com?subject=Collaboration%20Inquiry&body=Hi%20Pratham%2C%0A%0AI%20came%20across%20your%20portfolio%20and%20would%20love%20to%20connect%20regarding%20a%20potential%20collaboration%20or%20enquiry.%0A%0A"
           className="navbar-connect"
           target="_blank"
           rel="noreferrer"
